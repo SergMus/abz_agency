@@ -1,0 +1,39 @@
+@import './../../styles/base';
+
+
+.user_infobox {
+    @include centeredBlock(column, center, center);
+    margin-bottom: 100px;
+    width: 100%;
+
+    .heading {
+        @include heading1($black);
+        text-align: center;
+        margin-bottom: 50px;
+
+        @include media(phones) {
+            margin: 0 16px 50px;
+        }
+    }
+
+    .form {
+        @include centeredBlock(column, center, center);
+        width: 380px;
+    }
+
+    input:invalid {
+        border: 1px solid #CB3D40;
+    }
+
+    .error {
+        margin-top: 15px;
+        align-self: flex-start;
+        color: #CB3D40;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+    }
+
+}

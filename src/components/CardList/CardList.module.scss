@@ -1,0 +1,49 @@
+@import './../../styles/base';
+
+
+.cards_box {
+    text-align: center;
+    padding: 164px 0 140px 0;
+
+    .heading {
+        @include heading1($black);
+        
+        @include media(phones) {
+            margin: 0 16px 0;
+        }
+    }
+    
+    .cards_list {
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @include media(desctops){
+           grid-template-columns: repeat(3, 1fr);
+           margin: 50px 60px;
+        }
+        @include media(laptops){
+            grid-template-columns: repeat(2, 1fr);
+            margin: 50px 30px;
+        }
+        @include media(tablets){
+            grid-template-columns: repeat(2, 1fr);
+            margin: 50px 0;
+        }
+        @include media(phones){
+            @include centeredBlock(column, center, center);
+            margin: 50px 0;
+        }
+    }
+    
+    .btn_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    @include media(tablets) {
+        padding: 140px 16px;
+    }
+
+}

@@ -1,0 +1,25 @@
+
+@mixin centeredBlock($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+$media: (
+    phones: 575.98px,
+    tablets:767.98px,
+    laptops:1023.98px,
+    desctops: 1199.98px
+);
+
+@mixin media($breakpoint) {
+    @each $breakpoints, $size in $media {
+        @if $breakpoint == $breakpoints {
+            @media screen and (max-width: $size){
+                @content;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import './../../styles/base';
+
+.wrap_tooltip {     
+    position: relative;
+
+    .text {
+        @include primeFont($black);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        cursor: pointer;          
+
+        .tooltip {
+            background-color: $black;
+            padding: 3px 16px;
+            border-radius: 4px;
+            color: #fff;
+            position: absolute;
+            visibility: hidden;
+            transition: .05s ease;  
+        }
+        &:hover .tooltip {
+            visibility: visible;
+            z-index: 999;
+        }
+    }
+}

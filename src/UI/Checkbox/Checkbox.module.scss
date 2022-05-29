@@ -1,0 +1,71 @@
+@import './../../styles/base';
+
+.checkbox_container {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include media(phones) {
+        width: calc(100% - 32px);
+      }
+}
+
+.text {
+    @include primeFont($black);
+    margin-bottom: 11px;
+}
+
+.checkbox_input,
+.label {
+    cursor: pointer;
+    @include primeFont($black);
+    vertical-align: middle;
+}
+
+.label {
+    margin-left: 12px;
+}
+
+.checkbox_input {
+    position: relative;
+    appearance: none;
+    outline: none;
+    height: 20px;
+    width: 20px;
+}
+
+@mixin position() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+};
+
+.checkbox_input::before {
+    content: "";
+    @include position();
+    border: 1px solid #D0CFCF;
+    background-color: $bg_color;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox_input:checked::before {
+    content: "";
+    @include position();
+    border: 1px solid $secondary_color;
+    background-color: white;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox_input:checked::after {
+    content: "";
+    @include position();
+    visibility: visible;
+    background-color: $secondary_color;
+    width: 10px;
+    height: 10px;
+}

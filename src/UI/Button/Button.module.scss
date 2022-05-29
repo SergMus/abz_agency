@@ -1,0 +1,26 @@
+@import './../../styles/base';
+
+.btn {
+   @include centeredBlock(row, center, center);
+   @include primeFont($black);
+   background-color: $primary_color;
+   padding: 4px 18px;
+   min-width: 100px;
+   min-height: 34px;
+   border-radius: 80px;
+   border: none;
+   cursor: pointer;
+
+   &:hover {
+      background-color: $btn_hover;
+   }
+
+   &.disabled {
+      background-color: $btn_disabled;
+      color: #EDEDED;
+   }
+
+   &.hidden {
+      visibility: hidden;
+   }
+}

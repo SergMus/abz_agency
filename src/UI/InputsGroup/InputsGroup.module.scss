@@ -1,0 +1,28 @@
+@import './../../styles/base';
+
+.input_wrapper{
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+
+  .input {
+      width: 100%;
+      border: 1px solid #E4E3E3;
+      border-radius: 5px;
+      height: 54px;
+      @include primeFont($black);
+      padding: 14px 16px;
+
+      @include media(phones) {
+        width: calc(100% - 32px);
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: 60px;
+      left:10px;
+      color: #CB3D40;
+      font-size: 14px;
+    }
+}
