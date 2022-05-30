@@ -48,7 +48,7 @@ export default function InputsGroup({
           onChange={emailHandler}
         />
         <label htmlFor="email" className={s.label}>
-          user email, must be a valid email
+          email must be a in format name@name.domain
         </label>
       </div>
 
