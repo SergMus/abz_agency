@@ -4,7 +4,6 @@ import { emailValidate } from "./../../utils";
 
 export default function InputsGroup({
   inputs: { setName, setEmail, setPhone, name, email, phone },
-  validationError,
 }) {
   const nameHandler = (e) => {
     setName(e.target.value);
@@ -31,7 +30,7 @@ export default function InputsGroup({
           onChange={nameHandler}
         />
         <label htmlFor="name" className={s.label}>
-          {validationError.fails  && validationError.fails.name }
+          user name, should be 2-60 characters
         </label>
       </div>
 
@@ -49,7 +48,7 @@ export default function InputsGroup({
           onChange={emailHandler}
         />
         <label htmlFor="email" className={s.label}>
-        {validationError.fails && validationError.fails.email}
+          user email, must be a valid email
         </label>
       </div>
 
@@ -65,7 +64,7 @@ export default function InputsGroup({
           onChange={phoneHandler}
         />
         <label htmlFor="tel" className={s.label}>
-        {validationError.fails && validationError.fails.phone}
+          number should start with code of Ukraine +380
         </label>
       </div>
     </>

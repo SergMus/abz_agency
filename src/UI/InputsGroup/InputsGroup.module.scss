@@ -12,17 +12,22 @@
       height: 54px;
       @include primeFont($black);
       padding: 14px 16px;
-
-      @include media(phones) {
-      
-      }
     }
-
-    .label {
+    
+    .input:invalid + .label {
       position: absolute;
       top: 60px;
       left:10px;
-      color: #CB3D40;
-      font-size: 14px;
+      @include primeFont(#CB3D40);
+      font-size: 13px;
+      line-height: normal;
+      visibility: visible;
+    }
+
+    .input:valid + .label {
+      position: absolute;
+      top: 60px;
+      left:10px;
+      visibility: hidden;
     }
 }

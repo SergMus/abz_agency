@@ -17,7 +17,6 @@ export default function FormBox({ defaultPage }) {
   const [userImage, setUserImage] = useState(null);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const [validationError, setValidationError] = useState("");
 
   const form = useRef(null);
 
@@ -48,9 +47,6 @@ export default function FormBox({ defaultPage }) {
         if (err.response.status === 409) {
           setError(true);
         }
-        if (err.response.status === 422) {
-          setValidationError(err.toJSON());
-        }
       });
   };
 
@@ -68,12 +64,10 @@ export default function FormBox({ defaultPage }) {
             <form className={s.form} ref={form} onSubmit={submit}>
               <InputsGroup
                 inputs={{ setName, setEmail, setPhone, name, email, phone }}
-                validationError={validationError}
               />
               <Checkbox setPosition={setPosition} />
               <Upload
                 setUserImage={setUserImage}
-                validationError={validationError}
               />
 
               <Button
