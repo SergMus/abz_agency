@@ -4,10 +4,9 @@
     position: relative;
     background-color: $white;
     min-width: 250px;
-    text-align: center;
+    // text-align: center;
     border-radius: 8px;
     padding: 20px;
-    transition: appearance 2s ease;
 
     @include media(tablets) {
         width: 100%;
@@ -15,6 +14,7 @@
 
     .image_wrapper {
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .image {
@@ -25,29 +25,5 @@
     
     .text_box {
         margin-top: 20px;
-    }
-    .wrap_tooltip {     
-        position: relative;
-
-        .text {
-            @include primeFont($black);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            cursor: pointer;            
-
-            .tooltip {
-                background-color: $black;
-                padding: 3px 16px;
-                border-radius: 4px;
-                color: #fff;
-                position: absolute;
-                visibility: hidden;
-            }
-            &:hover .tooltip {
-                visibility: visible;
-                z-index: 999;
-            }
-        }
     }
 }

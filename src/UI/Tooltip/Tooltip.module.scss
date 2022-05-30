@@ -2,6 +2,7 @@
 
 .wrap_tooltip {     
     position: relative;
+    text-align: center;
 
     .text {
         @include primeFont($black);

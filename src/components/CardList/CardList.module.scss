@@ -2,11 +2,11 @@
 
 
 .cards_box {
-    text-align: center;
     padding: 164px 0 140px 0;
 
     .heading {
         @include heading1($black);
+        text-align: center;
         
         @include media(phones) {
             margin: 0 16px 0;
