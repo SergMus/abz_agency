@@ -3,7 +3,7 @@
 .input_wrapper{
   margin-bottom: 50px;
   position: relative;
-  width: 100%;
+  width: 380px;
 
   .input {
       width: 100%;
@@ -14,7 +14,7 @@
       padding: 14px 16px;
 
       @include media(phones) {
-        width: calc(100% - 32px);
+      
       }
     }
 

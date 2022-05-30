@@ -9,6 +9,16 @@
     @include centeredBlock(row, space-between, center);
     max-width: 1170px;
     margin: 12px auto;
+        
+        @include media(laptops) {
+            padding: 0 60px;
+        }
+        @include media(tablets) {
+            padding: 0 32px;
+        }
+        @include media(phones) {
+            padding: 0 16px;
+        }
     
         .nav {
             @include centeredBlock(row, flex-end, center);

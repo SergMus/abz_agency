@@ -9,7 +9,7 @@
   cursor: pointer;
   
   @include media(phones) {
-    width: calc(100% - 32px);
+  
   }
 
   .btn {
