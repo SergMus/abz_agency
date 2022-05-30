@@ -8,7 +8,7 @@ import Checkbox from "../../UI/Checkbox/Checkbox";
 import { api } from "../../api";
 import successImage from "./../../assets/success-image.svg";
 
-export default function FormBox({showLess}) {
+export default function FormBox({defaultPage}) {
   const [token, setToken] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,7 +42,7 @@ export default function FormBox({showLess}) {
       .createUser(formData, token)
       .then(() => {
         setSuccess(true);
-        showLess(6);
+        defaultPage(true);
       })
       .catch((err) => {
         if (err.response.status === 409) {
@@ -53,7 +53,6 @@ export default function FormBox({showLess}) {
         }
       });
   };
-console.log('render');
 
   return (
     <div id="registration" className={s.user_infobox}>

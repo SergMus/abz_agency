@@ -5,10 +5,10 @@ import Card from "../../UI/Card/Card";
 import Loader from "../../UI/Loader/Loader";
 import s from "./CardList.module.scss";
 
-export default function CardList({initialCount}) {
+export default function CardList({ defaultPage }) {
   const [usersData, setUsersData] = useState({});
   const [offset, setOffset] = useState(1);
-  const [count, setCount] = useState(initialCount);
+  const [count, setCount] = useState(6);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -19,11 +19,15 @@ export default function CardList({initialCount}) {
         setIsLoading(false);
       })
       .catch((err) => console.log(err.toJSON()));
-  }, [count, offset, initialCount]);
+  }, [count, offset]);
 
   const showMore = () => {
     setCount(count + 6);
   };
+
+  useEffect(() => {
+    setCount(6);
+  }, [defaultPage]);
 
   return (
     <div className={s.cards_box} id="cards">

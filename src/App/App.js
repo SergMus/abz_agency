@@ -7,8 +7,7 @@ import s from "./App.module.scss";
 
 function App() {
 
-  const [initialCount, setInitialCount] = useState(6);
-
+  const [defaultPage, setDefaultPage] = useState(false);
 
   return (
     <div className={s.wrapper}>
@@ -16,8 +15,8 @@ function App() {
 
       <div className={s.container}>
         <DescriptionBox />
-        <CardList initialCount={initialCount}/>
-        <FormBox showLess={setInitialCount}/>
+        <CardList defaultPage={defaultPage}/>
+        <FormBox setDefaultPage={setDefaultPage}/>
       </div>
     </div>
   );
