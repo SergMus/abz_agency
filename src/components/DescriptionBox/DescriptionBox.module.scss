@@ -33,6 +33,8 @@
     .heading {
         @include heading1($white);
         margin-bottom: 20px;
+        text-align: center;
+        
         @include media(phones) {
             margin: 0 16px 20px;
         }
@@ -40,6 +42,7 @@
     
     p {
         @include primeFont($white);
+        text-align: center;
         
         @include media(phones) {
             margin: 0 16px 0;
