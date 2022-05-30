@@ -12,10 +12,10 @@
         text-align: center;        
 
         .tooltip {
+            @include primeFont(#fff);
             background-color: $black;
             padding: 3px 16px;
             border-radius: 4px;
-            color: #fff;
             position: absolute;
             visibility: hidden;
             transition: .05s ease;  
