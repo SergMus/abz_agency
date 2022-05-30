@@ -2,14 +2,14 @@
 
 .wrap_tooltip {     
     position: relative;
-    text-align: center;
 
     .text {
         @include primeFont($black);
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        cursor: pointer;          
+        cursor: pointer;  
+        text-align: center;        
 
         .tooltip {
             background-color: $black;
