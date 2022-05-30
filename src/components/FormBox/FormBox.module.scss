@@ -36,4 +36,8 @@
         }
     }
 
+    @include media(phones) {
+        padding: 0 16px;
+    }
+
 }
