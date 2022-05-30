@@ -8,7 +8,7 @@ import Checkbox from "../../UI/Checkbox/Checkbox";
 import { api } from "../../api";
 import successImage from "./../../assets/success-image.svg";
 
-export default function FormBox({defaultPage}) {
+export default function FormBox({ defaultPage }) {
   const [token, setToken] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ export default function FormBox({defaultPage}) {
   const [error, setError] = useState(false);
   const [validationError, setValidationError] = useState("");
 
-  const form = useRef(null)
+  const form = useRef(null);
 
   useEffect(() => {
     api
@@ -70,11 +70,12 @@ export default function FormBox({defaultPage}) {
                 inputs={{ setName, setEmail, setPhone, name, email, phone }}
                 validationError={validationError}
               />
+              <Checkbox setPosition={setPosition} />
               <Upload
                 setUserImage={setUserImage}
                 validationError={validationError}
               />
-              <Checkbox setPosition={setPosition} />
+
               <Button
                 text="Sign up"
                 disabled={
