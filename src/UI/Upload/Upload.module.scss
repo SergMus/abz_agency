@@ -7,10 +7,6 @@
   width: 100%;
   @include primeFont($black);
   cursor: pointer;
-  
-  @include media(phones) {
-  
-  }
 
   .btn {
       border: 1px solid $black;
